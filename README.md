@@ -1,75 +1,34 @@
-# Nuxt Minimal Starter
+# Why tf this exists?
+- For the lols
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![idk](https://i.giphy.com/xoHntNXFYkfzGAftEv.webp)
 
-## Setup
 
-Make sure to install dependencies:
-
+# Run dev:
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+  bun run dev
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
+# Utility scripts
+## add [shadcn](https://www.shadcn-vue.com/) components
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+  ./sh/add [component-name]
 ```
 
-## Production
-
-Build the application for production:
-
+## update-gallery
+- takes contents of `./public/assets/gallery` and updates `./composables/_data/images.ts`
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+  python ./sh/update-gallery
 ```
 
-Locally preview production build:
-
+## convert images to webp
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+  cd <directory-with-images-to-convert>
+  for i in *.<extension>; do cwebp -q 80 "$i" -o "${i%.<extension>}.webp"; rm "$i"; done
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## bump version
+- creates a version tag, updates version in package.json and updates CHANGELOG.md
+```bash
+  ./sh/bump <version>
+```
