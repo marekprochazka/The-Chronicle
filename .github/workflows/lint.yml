@@ -1,0 +1,16 @@
+name: Run eslint
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: corepack enable
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+      # Pick your own package manager and build script
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun lint
