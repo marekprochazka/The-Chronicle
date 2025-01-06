@@ -18,7 +18,7 @@
 ## update-gallery
 - takes contents of `./public/assets/gallery` and updates `./composables/_data/images.ts`
 ```bash
-  python ./sh/update-gallery
+  ./sh/update-gallery
 ```
 
 ## convert images to webp

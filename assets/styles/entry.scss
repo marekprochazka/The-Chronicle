@@ -1,0 +1,16 @@
+@use 'tailwind-base.scss';
+@use 'typography.scss';
+@use 'navbar.scss';
+@use 'themes/entry.theme.scss';
+
+
+html,
+body,
+#__nuxt,
+#__layout,
+main {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+
